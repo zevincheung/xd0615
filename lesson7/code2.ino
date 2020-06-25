@@ -13,10 +13,7 @@ volatile int pinInterrupt = 2; //接中断信号的脚
 volatile byte n = 0 ;
 void onChange()
 {
-  if ( digitalRead(pinInterrupt) == LOW )
-      Serial.println("Key Down");
-   else
-      Serial.println("Key UP");
+  n = -1;
 }
  
 void setup()
@@ -30,7 +27,7 @@ void setup()
   pinMode(LT,OUTPUT);//测试
   pinMode(BT,OUTPUT);//消隐
   
-  pinMode(key, INPUT_PULLUP);//设置管脚为输入
+  pinMode(pinInterrupt, INPUT_PULLUP);//设置管脚为输入
   
   Serial.begin(9600); //打开串口
 
