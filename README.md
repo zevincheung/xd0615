@@ -1,5 +1,5 @@
 # xd0615
-for xduniversity
+
 1.登陆github并注册账户
 2.建立项目仓库
 3.git clone 到本地
